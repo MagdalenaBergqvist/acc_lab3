@@ -6,6 +6,7 @@ def welcolme():
     print("1")
     r = tasks.func.delay()
     print("2")
+    print(r.wait())
     return r.wait()
     #return "Hello World!"
 if __name__ == '__main__':
