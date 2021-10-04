@@ -1,6 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/hej', methods=['GET', 'POST'])
 def welcolme():
     return "Hello World!"
 if __name__ == '__main__':
