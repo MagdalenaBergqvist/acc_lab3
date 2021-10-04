@@ -15,6 +15,7 @@ def count_pronouns():
     for filename in os.listdir(directory):
         if(filename == ".DS_Store"):
             continue
+        print(filename)
         for line in open("./data/"+ filename, 'r'):
             if(line != "\n"):
                 data = json.loads(line)
