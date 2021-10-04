@@ -5,4 +5,4 @@ app = Celery('tasks', backend='rpc://', broker='pyamqp://guest@localhost//')
 
 @app.task
 def func():
-    count_pronouns()
+    return count_pronouns()
