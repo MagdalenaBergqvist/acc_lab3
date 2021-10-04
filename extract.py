@@ -42,7 +42,7 @@ def count_pronouns():
                         continue
                     word = word + letter
 
-    return json.dumps({"han" : han_counter, "hon" : hon_counter, "den": den_counter, "det": det_counter, "denna": denna_counter, "denne": denne_counter, "hen":hen_counter}, indent=4)
+    return {"han" : han_counter, "hon" : hon_counter, "den": den_counter, "det": det_counter, "denna": denna_counter, "denne": denne_counter, "hen":hen_counter}
     #print("han: "+ str(han_counter))
     #print("hon "+ str(hon_counter))
     #print("den "+ str(den_counter))
