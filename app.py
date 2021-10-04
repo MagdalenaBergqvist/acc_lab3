@@ -3,7 +3,9 @@ import tasks
 app = Flask(__name__)
 @app.route('/')
 def welcolme():
+    print("1")
     r = tasks.func.delay()
+    print("2")
     return r.wait()
     #return "Hello World!"
 if __name__ == '__main__':
