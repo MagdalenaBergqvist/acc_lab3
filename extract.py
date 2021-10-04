@@ -2,6 +2,7 @@ import json
 import os
 
 def count_pronouns():
+    print("count")
     han_counter = 0
     hon_counter = 0
     den_counter = 0
