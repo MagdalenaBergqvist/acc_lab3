@@ -1,13 +1,10 @@
 from flask import Flask
 import tasks
+import json
 app = Flask(__name__)
 @app.route('/')
 def welcolme():
-    print("1")
     r = tasks.func.delay()
-    print("2")
-    print(r.wait())
-    return r.wait()
-    #return "Hello World!"
+    return json.dump(r.wait(), indent=4)
 if __name__ == '__main__':
     app.run(host='0.0.0.0')#, port=5000)
