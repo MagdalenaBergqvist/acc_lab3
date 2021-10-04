@@ -13,7 +13,6 @@ hen_counter = 0
 
 directory = r'./data'
 for filename in os.listdir(directory):
-    print(filename)
     if(filename == ".DS_Store"):
         continue
     for line in open("./data/"+ filename, 'r'):
@@ -24,19 +23,19 @@ for filename in os.listdir(directory):
                 continue
             for letter in data['text']:
                 if(letter == " "):
-                    if (word == "han"):
+                    if (word.lower() == "han"):
                         han_counter = han_counter +1
-                    if (word == "hon"):
+                    if (word.lower() == "hon"):
                         hon_counter = hon_counter +1
-                    if (word == "den"):
+                    if (word.lower() == "den"):
                         den_counter = den_counter +1
-                    if (word == "det"):
+                    if (word.lower() == "det"):
                         det_counter = det_counter +1
-                    if (word == "denna"):
+                    if (word.lower() == "denna"):
                         denna_counter = denna_counter +1
-                    if (word == "denne"):
+                    if (word.lower() == "denne"):
                         denne_counter = denne_counter +1
-                    if (word == "hen"):
+                    if (word.lower() == "hen"):
                         hen_counter = hen_counter +1
                     word = ""
                     continue
