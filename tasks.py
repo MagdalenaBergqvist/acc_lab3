@@ -4,5 +4,5 @@ from extract import count_pronouns
 app = Celery('tasks', broker='pyamqp://guest@localhost//')
 
 @app.task
-def func():
-    count_pronouns()
+def add(x, y):
+    return x + y
